@@ -9,3 +9,7 @@ The Chu-Liu-Edmonds algorithm is used to find a Minimum Spanning Tree (MST)
 on directed weighted graphs.
 
 Open the project with IntelliJ IDEA Community Edition 12.1.3
+
+Intall the apk:
+You can find the compiled installable apk for your android device:
+Chu-Liu-Edmonds / out / production / Edmond2
