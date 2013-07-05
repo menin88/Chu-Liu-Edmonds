@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Chu-Liu-Edmonds</string>
+    <string name="drawActivity">Graph Drawer</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="hint_string">Arc[]From-Node[]ToNode[]Cost</string>
+    <string name="intro_text">Write down the arcs</string>
+    <string name="find">Run</string>
+    <string name="add">Add arc</string>
+    <string name="run_graph">Run G</string>
+    <string name="remove">Remove</string>
+    <string name="choose_file">Select a graph</string>
+    <string name="picker_text">Pick</string>
+</resources>

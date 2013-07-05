@@ -1,0 +1,157 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity">
+
+    <ScrollView
+            android:id="@+id/scroller"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="50dp"
+            android:layout_marginBottom="0dp" android:layout_marginTop="25dp">
+        <TableLayout
+                android:id="@+id/tableContainer"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" android:background="@drawable/blue_background"
+                android:clickable="false">
+            <TextView
+                    android:id="@+id/intro_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:text="@string/intro_text" android:layout_gravity="top" android:textColor="#ff0000">
+            </TextView>
+            <TableRow android:id="@+id/tableRow" android:layout_width="fill_parent"
+                      android:layout_height="wrap_content">
+                <EditText android:layout_width="70dp" android:layout_height="50dp" android:id="@+id/arc_name"
+                          android:inputType="text" android:hint="arc" android:layout_column="0"
+                          android:background="@layout/rounded_edittext"
+                          android:padding="5dip"/>
+                <EditText android:layout_width="85dp" android:layout_height="50dp" android:id="@+id/from_node"
+                          android:layout_column="1" android:inputType="number" android:singleLine="false"
+                          android:hint="root"
+                          android:background="@layout/rounded_edittext"
+                          android:padding="5dip"/>
+                <EditText android:layout_width="80dp" android:layout_height="50dp" android:id="@+id/to_node"
+                          android:layout_column="2" android:hint="t-node" android:inputType="number"
+                          android:background="@layout/rounded_edittext"
+                          android:padding="5dip"/>
+                <EditText android:layout_width="80dp" android:layout_height="50dp" android:id="@+id/cost"
+                          android:layout_column="3" android:hint="cost" android:inputType="number"
+                          android:background="@layout/rounded_edittext"
+                          android:padding="5dip"/>
+            </TableRow>
+            <TableRow android:id="@+id/tableRow1" android:layout_width="fill_parent"
+                      android:layout_height="wrap_content">
+                <EditText android:layout_width="70dp" android:layout_height="50dp" android:id="@+id/editText"
+                          android:inputType="text" android:hint="arc" android:layout_column="0"
+                          android:background="@layout/rounded_edittext"
+                          android:padding="5dip"/>
+                <EditText android:layout_width="85dp" android:layout_height="50dp" android:id="@+id/editText1"
+                          android:layout_column="1" android:inputType="number" android:singleLine="false"
+                          android:hint="f-node"
+                          android:background="@layout/rounded_edittext"
+                          android:padding="5dip"/>
+                <EditText android:layout_width="80dp" android:layout_height="50dp" android:id="@+id/editText2"
+                          android:inputType="number" android:layout_column="2" android:hint="t-node"
+                          android:background="@layout/rounded_edittext"
+                          android:padding="5dip"/>
+                <EditText android:layout_width="80dp"
+                          android:layout_height="50dp"
+                          android:id="@+id/editText3"
+                          android:inputType="number"
+                          android:layout_column="3"
+                          android:hint="cost"
+                          android:background="@layout/rounded_edittext"
+                          android:padding="5dip"/>
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+    <LinearLayout
+            android:id="@+id/control"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="true"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:gravity="bottom" android:background="@drawable/button_background">
+
+        <Button
+                android:id="@+id/find_mst"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/find"/>
+
+        <Button
+                android:id="@+id/add_list"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/add"/>
+
+        <Button
+                android:id="@+id/run_graph"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/run_graph"
+                />
+        <Button
+                android:id="@+id/remove"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/remove"
+                />
+        <Button
+                android:id="@+id/drawer"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:text="Draw"
+                />
+
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignTop="@+id/control">
+        <TextView
+                android:layout_width="70dp"
+                android:layout_height="fill_parent"
+                android:text="      Arc"
+                android:id="@+id/arc"
+                android:textColor="#ffce21"
+                android:layout_gravity="center_horizontal"
+                />
+        <TextView
+                android:layout_width="85dp"
+                android:layout_height="fill_parent"
+                android:text="From-Node"
+                android:id="@+id/from_node"
+                android:textColor="#ffce21"
+                android:layout_gravity="center_horizontal|bottom"/>
+        <TextView
+                android:layout_width="70dp"
+                android:layout_height="fill_parent"
+                android:text="  To-Node"
+                android:id="@+id/to_node"
+                android:textColor="#ffce21"
+                android:layout_gravity="center"/>
+        <TextView
+                android:layout_width="70dp"
+                android:layout_height="fill_parent"
+                android:text="    Cost"
+                android:id="@+id/cost"
+                android:textColor="#ffce21"
+                android:layout_gravity="center"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
